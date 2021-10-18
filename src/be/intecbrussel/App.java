@@ -1,12 +1,14 @@
 package be.intecbrussel;
 
+import be.intecbrussel.geometry.Rectangle;
+
 public class App {
     public static void main(String[] args) {
         Rectangle myRectangle = new Rectangle();
 //        myRectangle.setLength(-10);
 //        myRectangle.setWidth(5);
 
-        Rectangle mySquare = new Rectangle();
+        Rectangle mySquare = new Rectangle(7);
         mySquare.setLength(3);
         mySquare.setWidth(3);
 
