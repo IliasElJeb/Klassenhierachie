@@ -1,59 +1,61 @@
 package be.intecbrussel.geometry;
 
-public class Rectangle {
-    private double length; // default = 0
-    private double width; // default = 0
-    private double area;
+public class Rectangle extends Shape {
+    private int count;
+    public final int ANGLES = 4;
+    private int width;
+    private int height;
 
-    public Rectangle(double length, double width) {
-        setLength(length);
-        setWidth(width);
-        area = this.length * this.width;
+    public Rectangle() {
+
     }
 
-    public Rectangle(){
-        this(1, 1);
-        System.out.println("This is a constructor without params.");
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
     }
 
-    public Rectangle(double side) {
-        this(side, side);
-        System.out.println("This is a constructor with 1 param.");
+    public Rectangle(int x, int y, int count, int width, int height) {
+        super(x, y);
+        this.count = count;
+        this.width = width;
+        this.height = height;
     }
 
-    public void setLength(double length) {
-        boolean length2IsNegative = length < 0;
+    public Rectangle(Rectangle r) {
 
-        if (length2IsNegative) {
-            this.length = -length;
-        } else {
-            this.length = length;
-        }
     }
 
-    public void setWidth(double width2) {
-        if (width2 < 0) {
-            width = -width2;
-        } else {
-            width = width2;
-        }
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public double getWidth() {
+    public int getWidth() {
         return width;
     }
 
-    public double getArea() {
-        double area = length * width;
-        return area;
+    public void setWidth(int width) {
+        this.width = width;
     }
 
-    public double getCircumference() {
-        double circumference = (length * 2) + (width * 2);
-        return circumference;
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public double getArea() {
+
+        return height * width;
+    }
+
+    public double getPerimeter() {
+
+        return (height + width) * 2;
+    }
+    public void grow(int d){
+
+    }
+    public int getCount(){
+
+        return count;
     }
 }
