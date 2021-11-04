@@ -58,7 +58,7 @@ public class Triangle extends Shape {
         return width + width + width;
     }
 
-    public int getCount() {
+    public static int getCount() {
         return count;
 
 

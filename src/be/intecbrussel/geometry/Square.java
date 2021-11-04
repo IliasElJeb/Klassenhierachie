@@ -31,7 +31,7 @@ public class Square extends Rectangle {
     public void setHeight(int h) {
 
     }
-    public int getCount(){
+    public static int getCount(){
 
         return count;
     }

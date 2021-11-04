@@ -54,7 +54,7 @@ public class Rectangle extends Shape {
     public void grow(int d){
 
     }
-    public int getCount(){
+    public static int getCount(){
 
         return count;
     }

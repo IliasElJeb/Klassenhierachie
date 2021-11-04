@@ -1,17 +1,20 @@
 package be.intecbrussel.geometry;
 
 public abstract class Shape {
-    private int count;
+    private static int count;
     private int x;
     private int y;
 
+    {
+        count++;
+    }
 
     public Shape() {
+        this (0,0);
     }
 
     public Shape(int x, int y) {
-        this.x = x;
-        this.y = y;
+        setPosition(x,y);
     }
 
     public int getX() {
@@ -31,8 +34,8 @@ public abstract class Shape {
     }
 
     public void setPosition(int x, int y) {
-        this.x = x;
-        this.y = y;
+        setX(x);
+        setY(y);
     }
 
     public double getArea() {
@@ -42,7 +45,7 @@ public abstract class Shape {
     public double getPerimeter() {
         return getPerimeter();
     }
-    public int getCount(){
+    public static int getCount(){
         return count;
     }
 }

@@ -1,7 +1,7 @@
 package be.intecbrussel.geometry;
 
 public class Circle extends Shape {
-    public final int ANGLES = 0;
+    public static final int ANGLES = 0;
     private int count;
     private int radius;
 
@@ -38,13 +38,14 @@ public class Circle extends Shape {
 
     public double getPerimeter() {
 
-        return 2* (radius*Math.PI);
+        return 2 * (radius * Math.PI);
     }
 
     public void grow(int d) {
 
     }
-    public int getCount(){
+
+    public static int getCount() {
 
         return count;
     }

@@ -2,7 +2,7 @@ package be.intecbrussel.geometry;
 
 import jdk.swing.interop.SwingInterOpUtils;
 
-public class ShapeApp extends Shape {
+public abstract class ShapeApp extends Shape {
     public static void main(String[] args) {
 
         Rectangle myRectangle = new Rectangle (4,3);
